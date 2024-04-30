@@ -30,6 +30,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { recipe: items[0] },
+    revalidate: 1,
   };
 }
 
@@ -56,9 +57,7 @@ export default function RecipeDetails({ recipe }) {
         <h3>Ingredients:</h3>
 
         {ingredients.map((ing) => (
-          <span key={ing}>
-            {ing}
-          </span>
+          <span key={ing}>{ing}</span>
         ))}
       </div>
 
