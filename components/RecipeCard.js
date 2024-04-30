@@ -12,6 +12,7 @@ export default function RecipeCard({ recipe }) {
           src={'https:' + thumbnail.fields.file.url}
           width={thumbnail.fields.file.details.image.width}
           height={thumbnail.fields.file.details.image.height}
+          style={{ width: '500px', height: 'auto' }}
         />
       </div>
 
@@ -22,7 +23,7 @@ export default function RecipeCard({ recipe }) {
         </div>
 
         <div className="actions">
-          <Link href={'/recipes/' + slug}>
+          <Link legacyBehavior href={'/recipes/' + slug}>
             <a>Cook this</a>
           </Link>
         </div>
