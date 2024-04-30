@@ -29,6 +29,16 @@ export async function getStaticProps({ params }) {
     'fields.slug': params.slug,
   });
 
+  // redirect to home if slug doesn't exist
+  if(!items.length) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false // false means it will not be cached, in the future there will be an item for this slug
+      }
+    }
+  }
+
   return {
     props: { recipe: items[0] },
     revalidate: 1,
