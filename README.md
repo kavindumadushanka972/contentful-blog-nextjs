@@ -1,3 +1,8 @@
-nvm use 16
+## switch the node version
+`nvm use 16`
 
-npm run dev
+## Install the dependencies
+`npm install`
+
+## Run the application
+`npm run dev`
