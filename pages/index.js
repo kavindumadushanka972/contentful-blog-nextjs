@@ -12,8 +12,8 @@ export async function getStaticProps() {
   return {
     props: {
       recipes: res.items,
-      revalidate: 1, // what this do is, it revalidates the page after 1 second of inactivity and fetches new data from the server
     },
+    revalidate: 1, // what this do is, it revalidates the page after 1 second of inactivity and fetches new data from the server
   };
 }
 
